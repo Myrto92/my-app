@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+}
+
+.container {
+  margin: 50px;
+}
+.row {
+  border: 4px solid #f1a6bb;
+  padding-top: 40px;
+  width: 500px;
+  height: 150px;
+  color: black;
+  background: #c6ebde;
+}
