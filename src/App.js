@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import Search from "./Search";
 import Me from "./Me";
+
 function App() {
   return (
     <div className="App">
