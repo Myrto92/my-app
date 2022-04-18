@@ -6,6 +6,7 @@ import Me from "./Me";
 function App() {
   return (
     <div className="App">
+      <Me />
       <div className="container contain">
         <div className="row">
           <div className="col-4">
@@ -13,7 +14,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Me />
     </div>
   );
 }
