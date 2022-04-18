@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Search() {
   const [city, setCity] = useState(" ");
@@ -41,13 +42,21 @@ export default function Search() {
     return (
       <div>
         {form}
-        <ul>
-          <li>temperature:{Math.round(weather.temperature)}°C</li>
-          <li>humidity:{weather.humidity}%</li>
-          <li>description:{weather.description}</li>
-          <li>wind: {weather.wind}km/h</li>
-          <img src={weather.icon} alt="weather" />
-        </ul>
+        <div>
+          <div className="row mt-5 pb-5 result">
+            <div className="col-8">
+              <ul>
+                <li>humidity:{weather.humidity}%</li>
+                <li>description:{weather.description}</li>
+                <li>wind: {weather.wind}km/h</li>
+                <img src={weather.icon} alt="weather" />
+              </ul>
+            </div>
+            <div className="col-4">
+              <WeatherTemperature celsius={weather.temperature} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
